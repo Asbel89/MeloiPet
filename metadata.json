@@ -1,0 +1,7 @@
+{
+  "name": "MeloiPet ",
+  "description": "Plataforma de assinatura para banho e tosa profissional, inspirada na fluidez e conversão da Smart Fit.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

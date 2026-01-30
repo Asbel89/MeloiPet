@@ -1,0 +1,44 @@
+:root {
+  --meloi-primary: #6ecf99;
+  --meloi-dark: #5bb883;
+  --pet-secondary: #5aa3e7;
+  --pet-dark: #4a92d6;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --bg-light: #f9fafb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-main);
+  background: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar for Premium Feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--meloi-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--meloi-dark);
+}
