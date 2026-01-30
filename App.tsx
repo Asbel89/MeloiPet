@@ -82,7 +82,10 @@ const App: React.FC = () => {
       </button>
 
       {isAIModalOpen && (
-        <AISuggestionModal onClose={() => setIsAIModalOpen(false)} />
+        <AISuggestionModal
+          onClose={() => setIsAIModalOpen(false)}
+          onSuggestionApply={(size) => setSelectedSize(size)}
+        />
       )}
     </div>
   );

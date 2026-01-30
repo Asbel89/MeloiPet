@@ -38,14 +38,14 @@ const Header: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled || isMenuOpen
             ? 'bg-white shadow-lg py-3'
-            : 'bg-white/80 backdrop-blur-md py-5'
+            : 'bg-white/90 backdrop-blur-lg py-5'
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo - Meloi em Verde, Pet em Azul */}
-          <a href="#" className="text-2xl md:text-3xl font-extrabold flex items-center tracking-tight z-[110]">
-            <span className="text-[#6ecf99]">Meloi</span>
-            <span className="text-[#5aa3e7]">Pet</span>
+          <a href="#" className="text-2xl md:text-3xl font-extrabold flex items-center tracking-tight z-[110] transition-transform hover:scale-105">
+            <span className="text-[var(--meloi-primary)]">Meloi</span>
+            <span className="text-[var(--pet-secondary)]">Pet</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-4 z-[110]">
             <a
               href="#planos"
-              className="hidden sm:inline-flex bg-meloi text-white px-8 py-3 rounded-full font-bold hover:bg-[#5bb883] transition-all shadow-md hover:shadow-xl transform active:scale-95"
+              className="hidden sm:inline-flex bg-meloi text-white px-8 py-3 rounded-full font-bold hover:bg-[var(--meloi-dark)] transition-all shadow-md hover:shadow-xl transform active:scale-95"
             >
               Assinar agora
             </a>

@@ -5,6 +5,7 @@ import { PetSize } from '../types';
 
 interface AISuggestionModalProps {
   onClose: () => void;
+  onSuggestionApply: (size: PetSize) => void;
 }
 
 interface SuggestionResult {
@@ -14,7 +15,7 @@ interface SuggestionResult {
   estimatedSize: PetSize;
 }
 
-const AISuggestionModal: React.FC<AISuggestionModalProps> = ({ onClose }) => {
+const AISuggestionModal: React.FC<AISuggestionModalProps> = ({ onClose, onSuggestionApply }) => {
   const [loading, setLoading] = useState(false);
   const [petInfo, setPetInfo] = useState({ name: '', breed: '', frequency: '' });
   const [suggestion, setSuggestion] = useState<SuggestionResult | null>(null);
@@ -207,8 +208,11 @@ const AISuggestionModal: React.FC<AISuggestionModalProps> = ({ onClose }) => {
                 </button>
                 <a
                   href="#planos"
-                  onClick={onClose}
-                  className="flex-1 bg-meloi text-center text-white font-bold py-3 rounded-xl shadow-lg flex items-center justify-center"
+                  onClick={() => {
+                    onSuggestionApply(suggestion.estimatedSize);
+                    onClose();
+                  }}
+                  className="flex-1 bg-meloi text-center text-white font-bold py-3 rounded-xl shadow-lg flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
                 >
                   Ver este plano
                 </a>
